@@ -186,9 +186,9 @@ function addPoints(data) {
     // For Awesome icons use, see master branch
     var icon = L.icon({
     iconUrl: getIcon(data[row].Clase),
-    iconSize: [20, 30],
-    iconAnchor: [10, 30],
-    popupAnchor: [0, -30],
+    iconSize: [18, 28],
+    iconAnchor: [9, 28],
+    popupAnchor: [0, -28],
     //shadowUrl: 'css/images/markers-shadow.png',
     //shadowSize: [30, 10],
     //shadowAnchor: [5, 5]
