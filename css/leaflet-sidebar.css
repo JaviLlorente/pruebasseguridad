@@ -6,7 +6,7 @@
   overflow: hidden;
   z-index: 2000; }
   .leaflet-sidebar.collapsed {
-    width: 40px; }
+    width: 30px; }
   @media (min-width: 768px) {
     .leaflet-sidebar {
       top: 10px;
