@@ -174,7 +174,7 @@ function addPoints(data) {
 			'Pk: ' + e.target.feature.properties.Pk + '<br/>' +
 			//'Foto: ' + e.target.feature.properties.Foto + '<br/>' +
 			'Observaciones: ' + e.target.feature.properties.Observaciones + '<br/>' +
-			'<img src="' + e.target.feature.properties.Foto + '" width="300">' 
+			'<img src="' + e.target.feature.properties.Foto + '" width="275">' 
 			);		
 		
         sidebar.open(panelID);
