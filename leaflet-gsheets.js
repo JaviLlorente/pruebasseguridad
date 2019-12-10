@@ -23,10 +23,10 @@ function init() {
 }
 window.addEventListener('DOMContentLoaded', init);
 
-// Create a new Leaflet map centered on the continental US
+// Create a new Leaflet map
 var map = L.map('map').setView([41.11, -4.00], 9.4);
 
-// This is the Carto Positron basemap
+// Basemap openstreetmap
 var basemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
 	maxZoom: 18
