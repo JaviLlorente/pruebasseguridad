@@ -1,3 +1,16 @@
+
+
+# CHANGES  in this fork:
+
+- index.html (references to AwesomeMarkers have been commented).
+
+- leaflet-gsheets.js (basemap changed, some functions of the polygons have been commented and the points have been built without using AwesomeMarkers).
+Some png markers had been added from: https://github.com/pointhi/leaflet-color-markers
+
+
+
+# ORIGINAL README FILE FROM CHRIS ARDERNE: 
+
 # leaflet-gsheets
 
 How to create a simple [Leaflet](https://leafletjs.com/) web map that automatically pulls data from two simple Google Sheets tables. Sidebar created using [leaflet-sidebar-v2](https://github.com/nickpeihl/leaflet-sidebar-v2), and Google Sheets connection with [Tabletop.js](https://github.com/jsoma/tabletop).
