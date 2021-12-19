@@ -23,8 +23,8 @@ let panelID = "my-info-panel";
  * init() is called when the page has loaded
  */
 function init() {
-  // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([51.5, -0.1], 14);
+ // Create a new Leaflet map
+var map = L.map('map').setView([41.11, -4.00], 9.4);
 
 // Basemap openstreetmap
 var basemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
