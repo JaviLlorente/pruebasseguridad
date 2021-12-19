@@ -217,7 +217,6 @@ function addPoints(data) {
     });
     marker.setIcon(icon);
     }
-  }
 }
 
 
