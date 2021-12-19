@@ -206,18 +206,39 @@ function addPoints(data) {
     // COMMENT UNTIL HERE TO DISABLE SIDEBAR FOR THE MARKERS
 
     // AwesomeMarkers is used to create fancier icons
-    let icon = L.AwesomeMarkers.icon({
-      icon: "info-circle",
-      iconColor: "white",
-      markerColor: data[row].Clase,
-      prefix: "fa",
-      extraClasses: "fa-rotate-0",
+    let icon = L.icon({
+    iconUrl: getIcon(data[row].Clase),
+    iconSize: [18, 28],
+    iconAnchor: [9, 28],
+    popupAnchor: [0, -28],
+    //shadowUrl: 'css/images/markers-shadow.png',
+    //shadowSize: [30, 10],
+    //shadowAnchor: [5, 5]
     });
-    if (!markerType.includes("circle")) {
-      marker.setIcon(icon);
+    marker.setIcon(icon);
     }
   }
 }
+
+
+// Returns different colors depending on the string passed
+// Used for the points layer
+  function getIcon(type) {
+  switch (type) {
+    case 'MAMIFERO':
+      return 'css/images/marker-icon-red.png';
+    case 'AVE':
+      return 'css/images/marker-icon-yellow.png';
+	 case 'REPTIL':
+      return 'css/images/marker-icon-green.png';
+	 case 'ANFIBIO':
+     return 'css/images/marker-icon-blue.png';
+    default:
+      return 'pink';
+  }
+}
+
+
 
 /*
  * Accepts any GeoJSON-ish object and returns an Array of
