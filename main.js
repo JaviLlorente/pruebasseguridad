@@ -9,7 +9,7 @@
 // these URLs come from Google Sheets 'shareable link' form
 // the first is the geometry layer and the second the points
 let geomURL =
-  'https://docs.google.com/spreadsheets/d/1IUvPxkzFq-150l_tNod22UjmDiD2qZqRFyV3DU3ObUs/edit?usp=sharing';
+  "https://docs.google.com/spreadsheets/d/1IUvPxkzFq-150l_tNod22UjmDiD2qZqRFyV3DU3ObUs/edit?usp=sharing";
 let pointsURL =
   'https://docs.google.com/spreadsheets/d/1vAwVVkXdXVDvUKsMqRcwEI_rmr9t1q8Z-PLNiKncB1k/edit?usp=sharing';
 
@@ -23,8 +23,8 @@ let panelID = "my-info-panel";
  * init() is called when the page has loaded
  */
 function init() {
-  // Create a new Leaflet map centered on the continental US
-  map = L.map("map").setView([51.5, -0.1], 14);
+  // Create a new Leaflet map 
+  var map = L.map('map').setView([41.11, -4.00], 9.4);
 
   // This is the Carto Positron basemap
   L.tileLayer(
