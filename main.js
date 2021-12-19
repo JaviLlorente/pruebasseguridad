@@ -166,19 +166,40 @@ function addPoints(data) {
     //marker.bindPopup('<h2>' + data[row].name + '</h2>There's a ' + data[row].description + ' here');
 
     // COMMENT THE NEXT GROUP OF LINES TO DISABLE SIDEBAR FOR THE MARKERS
-    marker.feature = {
+     marker.feature = {
       properties: {
-        name: data[row].name,
-        description: data[row].description,
-      },
+		N: data[row].N, 
+		Usuario: data[row].Usuario,
+        Clase: data[row].Clase,
+        Especie: data[row].Especie,
+		Fecha: data[row].Fecha,
+		Seguridad_id: data[row].Seguridad_id,
+		Frecuencia_paso: data[row].Frecuencia_paso,
+		Carretera: data[row].Carretera,
+		Pk: data[row].Pk,
+		Foto: data[row].Foto,
+		Observaciones: data[row].Observaciones,
+      }
     };
     marker.on({
       click: function (e) {
-        L.DomEvent.stopPropagation(e);
-        document.getElementById("sidebar-title").innerHTML =
-          e.target.feature.properties.name;
-        document.getElementById("sidebar-content").innerHTML =
-          e.target.feature.properties.description;
+         L.DomEvent.stopPropagation(e);
+        document.getElementById('sidebar-title').innerHTML = e.target.feature.properties.Especie;
+        document.getElementById('sidebar-content').innerHTML = (
+			'N: ' + e.target.feature.properties.N + '<br/>' +
+			'Usuario: ' + e.target.feature.properties.Usuario + '<br/>' +
+			'Fecha: ' + e.target.feature.properties.Fecha + '<br/>' +
+			//'Clase: ' + e.target.feature.properties.Clase + '<br/>' +
+			//'Especie: ' + e.target.feature.properties.Especie + '<br/>' +
+			'Seguridad_id: ' + e.target.feature.properties.Seguridad_id + '<br/>' +
+			'Frecuencia_paso: ' + e.target.feature.properties.Frecuencia_paso + '<br/>' +
+			'Carretera: ' + e.target.feature.properties.Carretera + '<br/>' +	
+			'Pk: ' + e.target.feature.properties.Pk + '<br/>' +
+			//'Foto: ' + e.target.feature.properties.Foto + '<br/>' +
+			'Observaciones: ' + e.target.feature.properties.Observaciones + '<br/>' +
+			'<img src="' + e.target.feature.properties.Foto + '" width="270">' 
+			);		
+		
         sidebar.open(panelID);
       },
     });
@@ -188,7 +209,7 @@ function addPoints(data) {
     let icon = L.AwesomeMarkers.icon({
       icon: "info-circle",
       iconColor: "white",
-      markerColor: data[row].color,
+      markerColor: data[row].Clase,
       prefix: "fa",
       extraClasses: "fa-rotate-0",
     });
