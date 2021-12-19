@@ -27,16 +27,12 @@ function init() {
   var map = L.map('map').setView([41.11, -4.00], 9.4);
 
   // This is the Carto Positron basemap
-  L.tileLayer(
-    "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}{r}.png",
-    {
-      attribution:
-        "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='http://cartodb.com/attributions'>CartoDB</a>",
-      subdomains: "abcd",
-      maxZoom: 19,
-    }
-  ).addTo(map);
-
+  var basemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+	maxZoom: 18
+});
+basemap.addTo(map);
+  
   sidebar = L.control
     .sidebar({
       container: "sidebar",
