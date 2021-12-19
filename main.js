@@ -27,11 +27,11 @@ function init() {
 var map = L.map('map').setView([41.11, -4.00], 9.4);
 
 // Basemap openstreetmap
-var basemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-	maxZoom: 18
-});
-basemap.addTo(map);
+	maxZoom: 18,
+    }
+  ).addTo(map);
 
   sidebar = L.control
     .sidebar({
